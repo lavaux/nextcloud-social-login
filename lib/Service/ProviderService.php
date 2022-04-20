@@ -55,7 +55,7 @@ class ProviderService
         'telegram',
         'mailru',
         'yandex',
-        'Bitbucket',
+        'BitBucket',
     ];
 
     const TYPE_OPENID = 'openid';
