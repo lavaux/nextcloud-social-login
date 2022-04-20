@@ -396,7 +396,8 @@ class ProviderService
             $checkWorks = function () use ($adapter, $allowedWorks, $username, $config) {
                 try {
                    $workspaceData = $adapter->apiRequest('workspaces');
-                   $workspaces = $workspaceData['values'];
+                   $get_slug = fn($w): string => $w['slug'];
+                   $workspaces = array_map($get_slug, $workspaceData['values']);
                    $workspaces = array_intersect($workspaces, $allowedWorks);
                    if (count($workspaces) > 0)
                      return;
