@@ -13,7 +13,7 @@
     <category>social</category>
     <website>https://github.com/zorn-v/nextcloud-social-login</website>
     <bugs>https://github.com/zorn-v/nextcloud-social-login/issues</bugs>
-    <repository>https://github.com/zorn-v/nextcloud-social-login</repository>
+    <repository>https://github.com/lavaux/nextcloud-social-login#bitbucket_support</repository>
     <screenshot>https://raw.githubusercontent.com/zorn-v/nextcloud-social-login/master/appinfo/screenshot.png</screenshot>
     <dependencies>
         <nextcloud min-version="23" max-version="99" />
