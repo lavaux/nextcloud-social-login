@@ -56,7 +56,6 @@ class ProviderService
         'mailru',
         'yandex',
         'BitBucket',
-        'Bitbucket',
     ];
 
     const TYPE_OPENID = 'openid';
