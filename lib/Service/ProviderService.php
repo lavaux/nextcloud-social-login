@@ -387,7 +387,10 @@ class ProviderService
             $checkOrgs();
         }
 
-        if ($provider === 'BitBucket' && !empty($config['workspace'])) {
+        if ($provider === 'BitBucket') {
+            if (empty($config['workspace'])) {
+                throw new LoginException($this->l->t('Invalid setup for Bitbucket workspaces', $config['workspace']));
+            }
             $allowedWorks = array_map('trim', explode(',', $config['workspace']));
             $username = $adapter->apiRequest('user')->login;
             $checkWorks = function () use ($adapter, $allowedWorks, $username, $config) {
@@ -399,7 +402,7 @@ class ProviderService
                      return;
                 } catch (\Exception $e) {}
                 $this->storage->clear();
-                throw new LoginException($this->l->t('Login is available only to members of the following GitHub organizations: %s', $config['orgs']));
+                throw new LoginException($this->l->t('Login is available only to members of the following Bitbucket workspaces: %s', $config['workspace']));
             };
             $checkWorks();
         }
