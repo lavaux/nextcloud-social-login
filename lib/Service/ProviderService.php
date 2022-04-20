@@ -55,6 +55,7 @@ class ProviderService
         'telegram',
         'mailru',
         'yandex',
+        'Bitbucket',
     ];
 
     const TYPE_OPENID = 'openid';
@@ -252,6 +253,7 @@ class ProviderService
                         'callback' => $callbackUrl,
                         'default_group' => $prov['defaultGroup'],
                         'orgs' => $prov['orgs'] ?? null,
+                        'workspace' => $prov['workspace'] ?? null,
                         'guilds' => $prov['guilds'] ?? null,
                     ], $this->applyConfigMapping('default', $prov));
 

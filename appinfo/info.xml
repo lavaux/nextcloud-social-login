@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
-    <id>sociallogin</id>
-    <name>Social Login</name>
-    <summary>Social login via OAuth or OpenID</summary>
+    <id>sociallogin-bb</id>
+    <name>Social Login-bb</name>
+    <summary>Social login via OAuth or OpenID (bitbucket)</summary>
     <description> </description>
     <version>4.14.0</version>
     <licence>agpl</licence>
