@@ -4,7 +4,7 @@ import confirmPassword from '@nextcloud/password-confirmation'
 import axios from '@nextcloud/axios'
 
 document.addEventListener('DOMContentLoaded', function () {
-  var appName = 'sociallogin-bb';
+  var appName = 'sociallogin';
   var form = document.getElementById('sociallogin_personal_settings')
   function saveSettings() {
     confirmPassword().then(function () {
